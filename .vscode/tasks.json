@@ -72,6 +72,18 @@
       "label": "Enable Discovery and Deploy ztch_dms_01",
       "taskType": "Deploy",
       "enableDiscovery": "true"
+    },
+    {
+      "type": "build.mta",
+      "label": "Build MTA: ztch_dms_01 - PT",
+      "taskType": "Build",
+      "projectPath": "/home/user/projects/ztch_dms_01",
+      "extensions": [],
+      "ui5version": "1.132.0",
+      "ui5theme": "sap_horizon",
+      "vendorDependency": false,
+      "buildCodeServicePlan": true,
+      "subdomain": ""
     }
   ]
 }

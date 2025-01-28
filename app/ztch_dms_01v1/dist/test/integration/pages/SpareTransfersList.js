@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var s={actions:{},assertions:{}};return new t({appId:"ztch.ztchdms01v1",componentId:"SpareTransfersList",contextPath:"/SpareTransfers"},s)});
+//# sourceMappingURL=SpareTransfersList.js.map

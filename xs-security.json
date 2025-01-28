@@ -2,5 +2,6 @@
   "scopes": [],
   "attributes": [],
   "role-templates": [],
-  "authorities-inheritance": false
+  "xsappname": "ztch_dms_01",
+  "tenant-mode": "dedicated"
 }
