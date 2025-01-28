@@ -50,7 +50,12 @@
         "[production]": {
           "kind": "xsuaa"
         }
-      }
+      },
+      "sdm": {
+        "settings": {
+          "repositoryId": "32484b8b-208d-4e91-b24f-f3b163cf80e1"
+        }
+      }  
     }
   },
   "lcap": true,
