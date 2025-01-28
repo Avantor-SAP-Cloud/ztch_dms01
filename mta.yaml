@@ -76,6 +76,7 @@ modules:
       - name: ztch_dms_01-service-metadata
       - name: ztch_dms_01-service-connectivity
       - name: ztch_dms_01-service-logs
+      - name: default_sdm
   - name: ztch_dms_01-aux-destinations
     type: com.sap.application.content
     parameters:
@@ -104,13 +105,13 @@ modules:
               TokenServiceKeyName: ztch_dms_01-uaa-key
               URL: ~{srv-api/srv-url}/service/ztch_dms_01
               sap.cloud.service: lcap.ztch_dms_01
-              sap.applicationdevelopment.actions.enabled: false
+              sap.applicationdevelopment.actions.enabled: true
               sap.build.usage: CAP
-              sap.processautomation.enabled: false
-              HTML5.DynamicDestination: false
-              WebIDEEnabled: false
-              MobileEnabled: false
-              AppgyverEnabled: false
+              sap.processautomation.enabled: true
+              HTML5.DynamicDestination: true
+              WebIDEEnabled: true
+              MobileEnabled: true
+              AppgyverEnabled: true
     build-parameters:
       no-source: true
     requires:
@@ -217,3 +218,8 @@ resources:
       service: html5-apps-repo
       service-plan: app-host
       service-name: ztch_dms_01-html5-apps-repo-host
+  - type: org.cloudfoundry.managed-service
+    name: default_sdm
+    parameters:
+      service: sdm
+      service-plan: build-code
