@@ -187,11 +187,22 @@ resources:
     name: ztch_dms_01-service-destination
     parameters:
       service: destination
+      service-keys:
+        - name: ztch_dms_01-destination-key
       service-plan: lite
       service-name: ztch_dms_01-destination
       config:
         HTML5Runtime_enabled: true
         version: 1.0.0
+        init_data:
+          instance:
+            destinations:
+              - Authentication: NoAuthentication
+                Name: ui5
+                ProxyType: Internet
+                Type: HTTP
+                URL: https://ui5.sap.com
+            existing_destinations_policy: update        
   - type: org.cloudfoundry.user-provided-service
     name: ztch_dms_01-service-metadata
     parameters:
