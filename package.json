@@ -10,7 +10,7 @@
     "@cap-js/sdm": "^1.2.2",
     "@sap-cloud-sdk/http-client": "^3.25.0",
     "@sap-cloud-sdk/util": "^3.25.0",
-    "@sap/cds": "^8",
+    "@sap/cds": "8.6.0",
     "@sap/low-code-event-handler": "^1.2.5",
     "@sap/mdk-tools": "^1.12.1",
     "@sap/xsenv": ">=3.3.2 <3.3.3",
@@ -53,7 +53,7 @@
       },
       "sdm": {
         "settings": {
-          "repositoryId": "32484b8b-208d-4e91-b24f-f3b163cf80e1"
+          "repositoryId": "eee81fe8-d194-4ad8-a396-9b2c0b3daf46"
         }
       }  
     }
