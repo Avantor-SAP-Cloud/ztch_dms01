@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","ztchdms01/withoutdms/test/integration/FirstJourney","ztchdms01/withoutdms/test/integration/pages/WithoutSpareRequestsList","ztchdms01/withoutdms/test/integration/pages/WithoutSpareRequestsObjectPage"],function(t,e,s,i){"use strict";var t=new t({launchUrl:sap.ui.require.toUrl("ztchdms01/withoutdms")+"/index.html"});t.run({pages:{onTheWithoutSpareRequestsList:s,onTheWithoutSpareRequestsObjectPage:i}},e.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

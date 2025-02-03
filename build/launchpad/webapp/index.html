@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"ztch_dms_01Srv","DetailsURL":"./service/ztch_dms_01/","Metadata":"./service/ztch_dms_01/$metadata","Entities":[{"Name":"SpareTransfers","URL":"./service/ztch_dms_01/SpareTransfers","FioriURL":""}],"EntitiesCount":1}]}
+                            const data = {"Services":[{"ServiceName":"ztch_dms_01Srv","DetailsURL":"./service/ztch_dms_01/","Metadata":"./service/ztch_dms_01/$metadata","Entities":[{"Name":"WithSpareTransfers","URL":"./service/ztch_dms_01/WithSpareTransfers","FioriURL":""},{"Name":"WithoutSpareRequests","URL":"./service/ztch_dms_01/WithoutSpareRequests","FioriURL":""}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"ztchdms01.withoutdms",componentId:"WithoutSpareRequestsList",contextPath:"/WithoutSpareRequests"},e)});
+//# sourceMappingURL=WithoutSpareRequestsList.js.map

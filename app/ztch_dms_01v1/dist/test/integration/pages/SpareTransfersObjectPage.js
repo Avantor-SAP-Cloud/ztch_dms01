@@ -1,2 +1,0 @@
-sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"ztch.ztchdms01v1",componentId:"SpareTransfersObjectPage",contextPath:"/SpareTransfers"},t)});
-//# sourceMappingURL=SpareTransfersObjectPage.js.map
