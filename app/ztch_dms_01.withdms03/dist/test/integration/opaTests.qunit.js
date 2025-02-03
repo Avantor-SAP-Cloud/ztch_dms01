@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","ztchdms01/withdms03/test/integration/FirstJourney","ztchdms01/withdms03/test/integration/pages/WithSpareTransfersList","ztchdms01/withdms03/test/integration/pages/WithSpareTransfersObjectPage"],function(t,e,s,r){"use strict";var t=new t({launchUrl:sap.ui.require.toUrl("ztchdms01/withdms03")+"/index.html"});t.run({pages:{onTheWithSpareTransfersList:s,onTheWithSpareTransfersObjectPage:r}},e.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

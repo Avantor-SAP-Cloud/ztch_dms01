@@ -26,9 +26,9 @@ build-parameters:
       commands:
         - npm install
 modules:
-  - name: ztch_dms_01-ztchdms01.withdms
+  - name: ztch_dms_01-ztchdms01.withdms03
     type: html5
-    path: app/ztch_dms_01.withdms
+    path: app/ztch_dms_01.withdms03
     build-parameters:
       builder: custom
       commands:
@@ -38,8 +38,8 @@ modules:
           npx -p @ui5/cli@^3.0.0 ui5 build --dest dist
           --include-task=generateCachebusterInfo
         - mkdir dist-zip
-        - bash -c "cd dist && npx bestzip ../dist-zip/ztchdms01withdms.zip *"
-      _artifactName: ztchdms01withdms.zip
+        - bash -c "cd dist && npx bestzip ../dist-zip/ztchdms01withdms03.zip *"
+      _artifactName: ztchdms01withdms03.zip
       supported-platforms: []
       build-result: dist-zip
   - name: ztch_dms_01-ztchdms01.withoutdms
@@ -164,9 +164,9 @@ modules:
     build-parameters:
       build-result: resources
       requires:
-        - name: ztch_dms_01-ztchdms01.withdms
+        - name: ztch_dms_01-ztchdms01.withdms03
           artifacts:
-            - ztchdms01withdms.zip
+            - ztchdms01withdms03.zip
           target-path: resources
         - name: ztch_dms_01-ztchdms01.withoutdms
           artifacts:

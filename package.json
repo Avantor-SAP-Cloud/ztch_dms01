@@ -29,8 +29,8 @@
     "start-local": "npm run generate-entry-point && npm run cds-watch",
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
-    "watch-ztch_dms_01.withdms": "cds watch --open ztch_dms_01.withdms/webapp/index.html?sap-ui-xx-viewCache=false",
-    "watch-ztch_dms_01.withoutdms": "cds watch --open ztch_dms_01.withoutdms/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-ztch_dms_01.withoutdms": "cds watch --open ztch_dms_01.withoutdms/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-ztch_dms_01.withdms03": "cds watch --open ztch_dms_01.withdms03/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "sql": {
@@ -61,7 +61,7 @@
   },
   "lcap": true,
   "sapux": [
-    "app/ztch_dms_01.withdms",
-    "app/ztch_dms_01.withoutdms"
+    "app/ztch_dms_01.withoutdms",
+    "app/ztch_dms_01.withdms03"
   ]
 }
