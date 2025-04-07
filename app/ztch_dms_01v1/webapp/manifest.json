@@ -99,12 +99,17 @@
         {
           "pattern": ":?query:",
           "name": "SpareTransfersList",
-          "target": "SpareTransfersList"
+          "target": [
+            "SpareTransfersList"
+          ]
         },
         {
           "pattern": "SpareTransfers({key}):?query:",
           "name": "SpareTransfersObjectPage",
-          "target": "SpareTransfersObjectPage"
+          "target": [
+            "SpareTransfersList",
+            "SpareTransfersObjectPage"
+          ]
         }
       ],
       "targets": {
@@ -142,6 +147,15 @@
               "editableHeaderContent": false,
               "contextPath": "/SpareTransfers"
             }
+          }
+        }
+      }
+    },
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.fe.templates.ObjectPage.ObjectPageController": {
+            "controllerName": "ztch.ztchdms01v1.ext.controller.CondensedLayout"
           }
         }
       }

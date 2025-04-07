@@ -25,5 +25,6 @@ annotate service.SpareTransfers with @(
             Value : SparePart,
         },
     ],
-);
+    UI.UpdateHidden : true,
+    );
 

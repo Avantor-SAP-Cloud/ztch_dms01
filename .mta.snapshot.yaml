@@ -5,6 +5,7 @@ description: A simple CAP project.
 parameters:
   deploy_mode: html5-repo
   enable-parallel-deployments: true
+  subdomain: avtr-apps01-dev
 build-parameters:
   before-all:
     - builder: custom
@@ -18,7 +19,7 @@ build-parameters:
         - npm install --production
         - >-
           bash -c "cds -v | grep 'cds-dk' || npm i --production --no-save
-          @sap/cds-dk @sap/mdk-tools"
+          @sap/cds-dk"
         - bash -c "export PATH=$PATH:$(pwd)/node_modules/.bin"
         - cds build --production
   after-all:
@@ -26,6 +27,24 @@ build-parameters:
       commands:
         - npm install
 modules:
+  - name: ztch_dms_01-ztchdms01.mngreqswithatts
+    type: html5
+    path: app/ztch_dms_01.mngreqswithatts
+    build-parameters:
+      builder: custom
+      commands:
+        - rm -rf dist-zip dist
+        - npm install
+        - >-
+          npx -p @ui5/cli@^3.0.0 ui5 build --dest dist
+          --include-task=generateCachebusterInfo
+        - mkdir dist-zip
+        - >-
+          bash -c "cd dist && npx bestzip
+          ../dist-zip/ztchdms01mngreqswithatts.zip *"
+      _artifactName: ztchdms01mngreqswithatts.zip
+      supported-platforms: []
+      build-result: dist-zip
   - name: ztch_dms_01-ztch.ztchdms01v1
     type: html5
     path: app/ztch_dms_01v1
@@ -147,6 +166,10 @@ modules:
     build-parameters:
       build-result: resources
       requires:
+        - name: ztch_dms_01-ztchdms01.mngreqswithatts
+          artifacts:
+            - ztchdms01mngreqswithatts.zip
+          target-path: resources
         - name: ztch_dms_01-ztch.ztchdms01v1
           artifacts:
             - ztchztchdms01v1.zip
@@ -170,7 +193,8 @@ resources:
       config:
         oauth2-configuration:
           redirect-uris:
-            - https://*.${default-domain}/login/*
+            - https://${subdomain}.launchpad.${default-domain}/login/*
+            - https://${subdomain}.${default-domain}/login/*
           credential-types:
             - binding-secret
             - x509

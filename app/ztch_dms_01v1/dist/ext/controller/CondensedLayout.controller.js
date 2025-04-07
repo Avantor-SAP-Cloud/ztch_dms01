@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/ControllerExtension"],function(e){"use strict";return e.extend("ztch.ztchdms01v1.ext.controller.CondensedLayout",{override:{onInit:function(){var e=this.base.getExtensionAPI().getModel()}}})});
+//# sourceMappingURL=CondensedLayout.controller.js.map
